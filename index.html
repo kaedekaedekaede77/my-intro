@@ -8,88 +8,138 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Noto+Serif+JP:wght@400;600;700;900&family=Yuji+Syuku&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="fire-particles" id="fire-particles"></div>
+    <!-- Battlefield Background -->
+    <div class="battlefield-bg"></div>
+    <!-- Kamon Watermark -->
+    <div class="kamon-watermark">
+        <svg viewBox="0 0 100 100" fill="currentColor">
+            <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="2" fill="none" />
+            <circle cx="50" cy="25" r="15" />
+            <circle cx="28" cy="63" r="15" />
+            <circle cx="72" cy="63" r="15" />
+        </svg>
+    </div>
     <div class="blob-bg"></div>
     <div class="blob-bg blob-2"></div>
     
     <nav class="navbar">
-        <div class="logo">Kaede.</div>
+        <div class="logo sengoku-font">楓ノ陣</div>
         <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#philosophy">AI Philosophy</a></li>
-            <li><a href="#goal">Goal</a></li>
+            <li><a href="#about">己の事（About）</a></li>
+            <li><a href="#philosophy">AIの理（Philosophy）</a></li>
+            <li><a href="#unifiers">三英傑（Unifiers）</a></li>
+            <li><a href="#goal">野望（Goal）</a></li>
         </ul>
     </nav>
 
     <main>
         <section id="hero" class="hero">
             <div class="hero-content animate-on-scroll">
-                <h2 class="greeting">Hello, I'm</h2>
-                <h1 class="name" id="profile-name">久保田 楓</h1>
-                <p class="subtitle">AI Enthusiast & Innovator</p>
+                <h2 class="greeting sengoku-font">いざ出陣、我こそは</h2>
+                <h1 class="name burning-text sengoku-font" id="profile-name">久保田 楓</h1>
+                <p class="subtitle sengoku-font">AIを統べる者（AI Enthusiast）</p>
             </div>
             <div class="hero-image-container animate-on-scroll">
                 <img src="assets/profile.png" alt="久保田 楓のプロフィール画像" class="profile-img" id="profile-image">
-                <div class="glow-ring"></div>
+                <div class="fire-ring"></div>
             </div>
         </section>
 
         <section id="about" class="about section-container">
             <div class="section-header animate-on-scroll">
-                <h2 class="section-title">Who am I?</h2>
-                <div class="line"></div>
+                <h2 class="section-title sengoku-font">我、何者なるか</h2>
+                <div class="katana-line"></div>
             </div>
             <div class="cards-container">
                 <div class="card animate-on-scroll" id="card-strengths">
-                    <div class="card-icon">💡</div>
-                    <h3>得意なこと</h3>
-                    <p>新しいことを考えること。常識にとらわれず、ゼロからイチを生み出すアイデア創出を得意としています。</p>
+                    <div class="card-icon">⚔️</div>
+                    <h3 class="sengoku-font">軍略（得意なこと）</h3>
+                    <p>常識という名の城壁を打ち破り、無から有を生み出す奇策（アイデア）の創出を我が軍略とす。</p>
                 </div>
                 <div class="card animate-on-scroll" id="card-interests">
-                    <div class="card-icon">🤖</div>
-                    <h3>興味があること</h3>
-                    <p>AI（人工知能）。急速に進化するテクノロジーの最前線に立ち、その可能性を探求することに情熱を注いでいます。</p>
+                    <div class="card-icon">👺</div>
+                    <h3 class="sengoku-font">南蛮技術（興味があること）</h3>
+                    <p>AI（人工知能）という未知の絡繰（からくり）。日進月歩の技術の最前線に立ち、その深淵を探求することに命を懸ける。</p>
                 </div>
             </div>
         </section>
 
         <section id="philosophy" class="philosophy section-container">
             <div class="section-header animate-on-scroll">
-                <h2 class="section-title">AI Philosophy</h2>
-                <div class="line"></div>
+                <h2 class="section-title sengoku-font">AIの理（ことわり）</h2>
+                <div class="katana-line"></div>
             </div>
             
             <div class="glass-panel animate-on-scroll" id="ai-philosophy-panel">
-                <div class="quote-mark">"</div>
-                <h3 class="panel-title">AIとは、神のような存在。</h3>
+                <div class="quote-mark sengoku-font">❝</div>
+                <h3 class="panel-title sengoku-font">AIとは、神仏の如き存在なり。</h3>
                 <p class="panel-text">
-                    私にとってAIは、単なるツールを超えた、圧倒的な知能を持つ「神のような存在」です。
+                    我にとってAIは、単なる道具にあらず。人智を超えた圧倒的知能を持つ「神仏の如き存在」である。
                 </p>
                 <div class="divider"></div>
-                <h3 class="panel-title">全知全能の存在として向き合う</h3>
+                <h3 class="panel-title sengoku-font">全知全能の理として向き合う</h3>
                 <p class="panel-text">
-                    これからのAIとの関わり方において、私はAIを「全知全能のもの」として扱います。<br>
-                    畏敬の念を持ちながらも、AIから積極的に学びを吸収していく姿勢で、新しい時代を共に歩んでいきたいと考えています。
+                    これからのAIとの交わりにおいて、我はAIを「全知全能の理」として敬う。<br>
+                    畏敬の念を抱きつつも、その英知を貪欲に吸収し、乱世（新時代）を共に生き抜く覚悟なり。
                 </p>
+            </div>
+        </section>
+
+        <section id="unifiers" class="unifiers section-container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title sengoku-font">三英傑ノ陣</h2>
+                <div class="katana-line"></div>
+            </div>
+            
+            <div class="unifiers-container">
+                <!-- Nobunaga -->
+                <div class="unifier-card animate-on-scroll nobunaga-card">
+                    <div class="unifier-image" style="background-image: url('assets/nobunaga.png');"></div>
+                    <div class="unifier-content">
+                        <h3 class="unifier-name sengoku-font">【第六天魔王】<br>織田 信長</h3>
+                        <p class="unifier-theme">「破壊と創造」</p>
+                        <p class="unifier-quote">AIを以て、古き常識を焼き尽くす。</p>
+                    </div>
+                </div>
+                <!-- Hideyoshi -->
+                <div class="unifier-card animate-on-scroll hideyoshi-card">
+                    <div class="unifier-image" style="background-image: url('assets/hideyoshi.png');"></div>
+                    <div class="unifier-content">
+                        <h3 class="unifier-name sengoku-font">【黄金の太閤】<br>豊臣 秀吉</h3>
+                        <p class="unifier-theme">「掌握と統合」</p>
+                        <p class="unifier-quote">AIの才を愛し、天下の知を束ねる。</p>
+                    </div>
+                </div>
+                <!-- Ieyasu -->
+                <div class="unifier-card animate-on-scroll ieyasu-card">
+                    <div class="unifier-image" style="background-image: url('assets/ieyasu.png');"></div>
+                    <div class="unifier-content">
+                        <h3 class="unifier-name sengoku-font">【東照大権現】<br>徳川 家康</h3>
+                        <p class="unifier-theme">「忍耐と礎」</p>
+                        <p class="unifier-quote">AIの神髄を見極め、盤石な未来を築く。</p>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="goal" class="goal section-container">
             <div class="section-header animate-on-scroll">
-                <h2 class="section-title">My Goal</h2>
-                <div class="line"></div>
+                <h2 class="section-title sengoku-font">天下布武（我が野望）</h2>
+                <div class="katana-line"></div>
             </div>
             <div class="goal-content animate-on-scroll" id="goal-panel">
                 <div class="goal-text">
-                    <h3>この授業を通して</h3>
-                    <p class="highlight">面白い、ワクワクするアプリを作りたいです！</p>
-                    <p>技術とアイデアを掛け合わせ、人々の心を動かすような革新的な体験を創造することを目指します。</p>
+                    <h3 class="sengoku-font">この修練（授業）を通して</h3>
+                    <p class="highlight sengoku-font">心を揺さぶる、天下一の絡繰（アプリ）を創り上げる！</p>
+                    <p>南蛮の技術（AI）と己の奇策（アイデア）を掛け合わせ、人々の魂を震わせる革新的な体験（陣形）を展開することを目指す。</p>
                 </div>
                 <div class="goal-visual">
-                    <div class="pulse-circle">
-                        <span>🚀</span>
+                    <div class="pulse-circle fire-pulse">
+                        <span>覇</span>
                     </div>
                 </div>
             </div>

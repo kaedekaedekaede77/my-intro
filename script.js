@@ -31,4 +31,35 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, 100);
+
+    // Create Embers
+    function createEmbers() {
+        const container = document.getElementById('fire-particles');
+        if (!container) return;
+
+        const emberCount = 60; // Number of embers
+
+        for (let i = 0; i < emberCount; i++) {
+            const ember = document.createElement('div');
+            ember.classList.add('ember');
+            
+            // Randomize properties
+            const size = Math.random() * 6 + 2; // 2px to 8px
+            const left = Math.random() * 100; // 0% to 100%
+            const duration = Math.random() * 4 + 2; // 2s to 6s
+            const delay = Math.random() * 5; // 0s to 5s
+            const drift = (Math.random() - 0.5) * 150; // drift horizontally
+
+            ember.style.width = `${size}px`;
+            ember.style.height = `${size}px`;
+            ember.style.left = `${left}%`;
+            ember.style.animationDuration = `${duration}s`;
+            ember.style.animationDelay = `${delay}s`;
+            ember.style.setProperty('--drift', drift);
+
+            container.appendChild(ember);
+        }
+    }
+
+    createEmbers();
 });
