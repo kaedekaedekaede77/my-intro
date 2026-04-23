@@ -62,4 +62,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     createEmbers();
+
+    // Samurai Pop-out Logic
+    const samurai = document.getElementById('samurai-pop');
+    const triggerSection = document.getElementById('about');
+
+    if (samurai && triggerSection) {
+        const samuraiObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    samurai.classList.add('active');
+                } else {
+                    samurai.classList.remove('active');
+                }
+            });
+        }, { threshold: 0.3 }); // Trigger when 30% of the section is visible
+        
+        samuraiObserver.observe(triggerSection);
+    }
 });

@@ -601,6 +601,88 @@ footer {
 }
 
 /* Responsive Design */
+.samurai-clash-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.samurai-left, .samurai-right {
+    position: absolute;
+    bottom: -10vh;
+    width: 60vw;
+    height: 60vw;
+    max-width: 800px;
+    max-height: 800px;
+    background-size: contain;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    mix-blend-mode: screen;
+    opacity: 0;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease;
+}
+
+.samurai-left {
+    left: -5vw;
+    background-image: url('assets/samurai_slash.png');
+    transform: scaleX(-1) translateX(100vw);
+}
+
+.samurai-right {
+    right: -5vw;
+    background-image: url('assets/samurai_blue.png');
+    transform: translateX(100vw);
+}
+
+.samurai-clash-container.active .samurai-left {
+    opacity: 1;
+    transform: scaleX(-1) translateX(0);
+    animation: clash-shake-left 0.1s infinite alternate 0.3s;
+}
+
+.samurai-clash-container.active .samurai-right {
+    opacity: 1;
+    transform: translateX(0);
+    animation: clash-shake-right 0.1s infinite alternate 0.3s;
+}
+
+.clash-flash {
+    position: absolute;
+    bottom: 20vh;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    width: 50vw;
+    height: 50vw;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,235,59,0.8) 20%, transparent 70%);
+    mix-blend-mode: screen;
+    opacity: 0;
+}
+
+.samurai-clash-container.active .clash-flash {
+    animation: flash-burst 1s forwards 0.25s;
+}
+
+@keyframes clash-shake-left {
+    0% { transform: scaleX(-1) translateX(0) translateY(0); }
+    100% { transform: scaleX(-1) translateX(-5px) translateY(5px); }
+}
+
+@keyframes clash-shake-right {
+    0% { transform: translateX(0) translateY(0); }
+    100% { transform: translateX(-5px) translateY(-5px); }
+}
+
+@keyframes flash-burst {
+    0% { transform: translateX(-50%) scale(0); opacity: 1; }
+    10% { transform: translateX(-50%) scale(1.5); opacity: 1; }
+    100% { transform: translateX(-50%) scale(2); opacity: 0; }
+}
+
 @media (max-width: 900px) {
     .hero {
         flex-direction: column;
